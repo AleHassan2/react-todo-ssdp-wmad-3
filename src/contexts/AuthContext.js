@@ -11,12 +11,11 @@ const AuthContext = createContext();
 
 const initialState = { isAuth: false, user: {} };
 const reducer = (state, action) => {
-  // console.log("action", action);
   switch (action.type) {
     case "SET_LOGGED_IN":
       return { ...state, isAuth: true, user: action.payload.user };
     case "SET_LOGGED_OUT":
-      localStorage.setItem("isLoggedIn", false);
+      localStorage.removeItem("isLoggedIn");
       localStorage.removeItem("user");
       return initialState;
     default:

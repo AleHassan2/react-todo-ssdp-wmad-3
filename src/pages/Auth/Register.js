@@ -31,7 +31,7 @@ export default function Register() {
     const user = { username, email, password, confirmPassword };
 
     const users = JSON.parse(localStorage.getItem("users")) || [];
-    // console.log("users", users);
+    console.log("users", users);
 
     if (password !== confirmPassword) {
       return message.error("Passwords do not match");

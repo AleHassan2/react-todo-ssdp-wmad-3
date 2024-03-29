@@ -8,6 +8,7 @@ import { useAuthContext } from "contexts/AuthContext";
 
 export default function Index() {
   const { isAuth } = useAuthContext();
+  // console.log(isAuth);
   return (
     <>
       <Routes>

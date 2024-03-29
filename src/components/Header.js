@@ -39,7 +39,7 @@ export default function Header() {
             {isAuth && (
               <span id="" className="text-white">
                 {" "}
-                Welcome Back __ {user.username}!{" "}
+                Welcome Back __ {user?.username}!{" "}
               </span>
             )}
 
